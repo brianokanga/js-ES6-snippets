@@ -68,3 +68,39 @@ function isFullAge6(limit, ...years) {
 	years.forEach(cur => console.log(2020 - cur >= limit));
 }
 isFullAge6(21, 1992, 2009, 1998, 2008);
+
+console.log('=========Default parameters==========');
+
+//es5 version of the concept
+//using fucntion constructors
+function SmithPerson(firstName, yearOfBirth, lastName, nationality) {
+	lastName === undefined ? (lastName = 'Smith') : (lastName = lastName);
+	nationality === undefined
+		? (nationality = 'Swedish')
+		: (nationality = nationality);
+
+	this.firstName = firstName;
+	this.lastName = lastName;
+	this.yearOfBirth = yearOfBirth;
+	this.nationality = nationality;
+}
+var johns = new SmithPerson('john', 1990);
+console.log(johns);
+
+console.log('=========ES6 Default parameters==========');
+
+//es6
+//Default parameter ()
+function SmithPerson(
+	firstName,
+	yearOfBirth,
+	lastName = 'Smith',
+	nationality = 'Swedish'
+) {
+	this.firstName = firstName;
+	this.lastName = lastName;
+	this.yearOfBirth = yearOfBirth;
+	this.nationality = nationality;
+}
+var johns = new SmithPerson('john', 1990);
+console.log(johns);
