@@ -46,3 +46,25 @@ function calcAgeRetirement(year) {
 const [age2, retirement] = calcAgeRetirement(1990);
 console.log(age2);
 console.log(retirement);
+
+console.log('=========rest parametors==========');
+
+//rest parametors
+//ES5
+function isFullAge5(limit) {
+	var argsArr = Array.prototype.slice.call(arguments, 1);
+	argsArr.forEach(function (cur) {
+		console.log(2020 - cur >= limit);
+	});
+}
+
+isFullAge5(21, 1992, 2009, 1998, 2008);
+
+console.log('=========ES6 SPREAD OPERATOR==========');
+
+// ES6
+//the spread operator converts the years to an array
+function isFullAge6(limit, ...years) {
+	years.forEach(cur => console.log(2020 - cur >= limit));
+}
+isFullAge6(21, 1992, 2009, 1998, 2008);
