@@ -33,3 +33,25 @@ let over18 = ages.find(cur => cur >= 18);
 
 console.log(index);
 console.log(over18);
+
+//SPREAD OPERATOR
+//works the same as apply()
+function addFourAges(a, b, c, d) {
+	return a + b + c + d;
+}
+
+let ageset = [18, 30, 12, 21];
+const sum = addFourAges(...ageset);
+console.log(sum);
+
+//SPREAD OPERATOR for joining Arrays
+const familySmith = ['John', 'Jane', 'Mark'];
+const familyMiller = ['Mary', 'Bob', 'Ann'];
+const bigFamily = [...familySmith, 'Eliza', ...familyMiller];
+console.log(bigFamily);
+
+//SPREAD OPERATOR on nodelist
+
+//How to remove Array dublicates
+// const array = [1, 3, 2, 4, 5, 4, 6, 4, 3, 5, 6, 3, 5, , 7];
+// const uniqueSet = new Set(array);
