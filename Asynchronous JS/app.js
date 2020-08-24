@@ -13,7 +13,7 @@
 
 // first();
 
-//OLD WAYS ASYNCHRONOUS WOTH CALLBACKS
+//OLD WAYS ASYNCHRONOUS WITH CALLBACKS
 
 //fake recipe reader simulating ajax calls loading data from remote server
 function getRecipe() {
