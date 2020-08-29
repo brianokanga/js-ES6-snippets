@@ -4,7 +4,7 @@
 function getWeather(woeid) {
 	fetch(`https://www.metaweather.com/api/location/${woeid}`)
 		.then(result => {
-			//convert from json to JS
+			//convert from JS to json 
 			return result.json(); // returns a promise
 		})
 
